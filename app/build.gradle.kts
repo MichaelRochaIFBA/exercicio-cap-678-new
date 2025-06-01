@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.michael.listadecomprasnew"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.michael.listadecomprasnew"
@@ -46,4 +46,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.activity:activity-ktx:1.12.0-alpha01")
+
+
 }
