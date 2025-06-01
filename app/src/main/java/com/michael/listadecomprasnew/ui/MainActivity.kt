@@ -1,4 +1,4 @@
-package com.michael.listadecomprasnew
+package com.michael.listadecomprasnew.ui
 
 import android.os.Bundle
 import android.widget.Button
@@ -9,10 +9,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.michael.listadecomprasnew.R
+import com.michael.listadecomprasnew.viewmodel.ItemsViewModel
+import com.michael.listadecomprasnew.viewmodel.ItemsViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
-    val viewModel: ItemsViewModel by viewModels()
+    val viewModel: ItemsViewModel by viewModels {
+        ItemsViewModelFactory(applicationContext)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

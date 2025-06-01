@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
+
 }
 
 android {
@@ -48,5 +50,9 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.4.0")
     implementation("androidx.activity:activity-ktx:1.12.0-alpha01")
 
+    implementation("androidx.room:room-runtime:2.7.1")
+    implementation("androidx.room:room-ktx:2.7.1")
+    annotationProcessor("androidx.room:room-compiler:2.7.1")
+    kapt("androidx.room:room-compiler:2.7.1")
 
 }

@@ -1,4 +1,4 @@
-package com.michael.listadecomprasnew
+package com.michael.listadecomprasnew.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.michael.listadecomprasnew.R
+import com.michael.listadecomprasnew.model.ItemModel
 
 class ItemsAdapter: RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
 
@@ -21,7 +23,8 @@ class ItemsAdapter: RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
         notifyDataSetChanged()
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.
+        val view = LayoutInflater.from(parent.context).inflate(
+            R.
         layout.item_layout, parent, false)
         return ItemViewHolder(view)
     }
